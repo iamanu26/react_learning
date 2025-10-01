@@ -1,10 +1,14 @@
 
-
+import Test from "./test"
 function App() {
   
 
   return (
-    <h1>Introduction to  react with vite | Anurag Dubey</h1>
+    <>
+     <h1>Introduction to  react with vite | Anurag Dubey</h1>
+    <Test/>
+    </>
+   
   )
 }
 
