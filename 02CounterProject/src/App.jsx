@@ -5,11 +5,29 @@ import './App.css'
 
 function App() {
 
-  let counter = 15
+  let [counter , setCounter] =  useState(15)
+
+  //let counter = 15
 
   const addValue = ()=>{
-    console.log("clicked" , Math.random() , counter)
-    counter = counter + 1;
+    console.log("clicked" , Math.random() , counter);
+    //counter = counter + 1
+    if(counter>=20)
+    {
+      alert("Value cannot be greater then 20")
+    } else{
+       setCounter(counter+1)
+    }
+
+  }
+
+  const removeValue = ()=>{
+     if(counter<=0)
+    {
+      alert("Value cannot be lesser then 0")
+    } else{
+       setCounter(counter-1)
+    }
   }
 
   return (
@@ -23,7 +41,10 @@ function App() {
       >Add value</button>
       <br />
       <br />
-      <button>remove value</button>
+      <button
+      onClick={removeValue}
+      >remove value</button>
+      <p>footer: {counter}</p>
     </>
   )
 }
