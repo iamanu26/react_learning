@@ -1,6 +1,6 @@
 import React, {useId} from "react";
 
-
+ const hello = 0;
 function InputBox({
     label,
     amount,
@@ -13,6 +13,7 @@ function InputBox({
     className = "",
 }) {
     const amountInputId = useId();
+   
    
 
     return (
